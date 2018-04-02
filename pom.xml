@@ -6,6 +6,7 @@
 
     <groupId>cn.devcenter.framework</groupId>
     <artifactId>parent</artifactId>
+    <packaging>pom</packaging>
     <version>1.0.0</version>
     <developers>
         <developer>
@@ -14,7 +15,8 @@
         </developer>
     </developers>
     <properties>
-        <framework.version>1.0.0</framework.version>
+        <dependencies.version>1.0.0</dependencies.version>
+        <devcenter-model.version>1.0.0</devcenter-model.version>
         <jdk.version>1.8</jdk.version>
         <maven.jar.plugin.version>3.0.2</maven.jar.plugin.version>
         <maven.compiler.plugin.version>3.7.0</maven.compiler.plugin.version>
@@ -72,7 +74,14 @@
             <dependency>
                 <groupId>cn.devcenter.framework</groupId>
                 <artifactId>dependencies</artifactId>
-                <version>${framework.version}</version>
+                <version>${dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>cn.devcenter.model</groupId>
+                <artifactId>devcenter-model</artifactId>
+                <version>${devcenter-model.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
